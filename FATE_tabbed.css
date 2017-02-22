@@ -5,6 +5,7 @@
 
 .sheet-section {
     width:840px;
+    margin-bottom:10px;
 }
 
 .charsheet h3 {
@@ -25,17 +26,27 @@
     margin:5px;
 }
 
+.sheet-input_box {
+    width:30px;
+    border: 2px solid black;
+}
+
+.sheet-input_header {
+    width:100%;
+    background-color:black;
+    color:white;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
 .charsheet textarea {
     border: 2px solid black;
     width:100%;
     margin-bottom:5px;
     resize:none;
 }
-
-.sheet-col {
-    margin-bottom:10px;
-}
-
 
 .sheet-box {
     border: 2px solid black;
