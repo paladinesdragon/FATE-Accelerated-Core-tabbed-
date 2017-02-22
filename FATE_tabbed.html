@@ -63,7 +63,10 @@
     <div class='sheet-section'>
         <div class='sheet-col' style='width:100%'>
             <h3>STUNTS</h3>
-            <textarea style='height:400px'></textarea>
+            <textarea style='height:200px'></textarea>
+            <fieldset class='repeating_accstunts'>
+                <textarea name='attr_accstuntdesc' style='height:200px'></textarea>
+            </fieldset>
         </div>
     </div>
     
@@ -72,9 +75,9 @@
             <h3>STRESS</h3>
             <table>
                 <tr>
-                    <td><textarea style='height:100px'></textarea></td>
-                    <td><textarea style='height:100px'></textarea></td>
-                    <td><textarea style='height:100px'></textarea></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
                 </tr>
                 <tr>
                     <td><h2>1</h2></td>
@@ -125,7 +128,7 @@
     </div>    
     
     <div class='sheet-section'>
-        <div class='sheet-col'>
+        <div class='sheet-col' style='width:100%'>
             <h3>ASPECTS</h3>
             <input class='sheet-input_text' type='text' placeholder='High Concept'>
             <input class='sheet-input_text' type='text' placeholder='Trouble'>
@@ -135,7 +138,7 @@
         </div>
     </div>   
     
-    <div class='sheet-section' style='margin-bottom:10px'>
+    <div class='sheet-section'>
        
           <h3>SKILLS</h3>
             <table>
@@ -231,28 +234,106 @@
         
     </div>
     
-    <div class='sheet-section' style='margin-bottom:10px'>
-        <h3>EXTRAS</h3>
-            <textarea style='height:400px'></textarea>
-    </div>  
-    
-    <div class='sheet-section' style='margin-bottom:10px'>
-        <h3>STUNTS</h3>
-            <textarea style='height:400px'></textarea>
+    <div class='sheet-section'>
+        
+        <div class='sheet-col' style='width:49%'>
+            <h3>STUNTS</h3>
+                <textarea style='height:200px'></textarea>
+                    <fieldset class='repeating_corestunts'>
+                        <textarea style='height:200px' name='attr_corestuntdesc'></textarea>
+                    </fieldset>
+        </div>
+        
+        <div class='sheet-col' style='width:50%; margin-left:3px'>
+            <h3>EXTRAS</h3>
+                <textarea style='height:200px'></textarea>
+                    <fieldset class='repeating_coreextras'>
+                        <textarea style='height:200px' name='attr_coreextradesc'></textarea>
+                    </fieldset>
+        </div>
     </div>
     
     <div class='sheet-section'>
         <div class='sheet-col' style='width:49%; text-align:center'>
             <h3>PHYSICAL STRESS (Physique)</h3>
-            <input class='sheet-input_number' type='number' value='0' min='0' max='5'>
+            <table>
+                <tr>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                </tr>
+                <tr>
+                    <td><h2 style='padding-top:0px'>1</h2></td>
+                    <td><h2 style='padding-top:0px'>2</h2></td>
+                    <td><h2 style='padding-top:0px'>3</h2></td>
+                    <td><h2 style='padding-top:0px'>4</h2></td>
+                </tr>
+            </table>
         </div>    
+        
+        
         <div class='sheet-col' style='width:50%; text-align:center; margin-left:3px'>
             <h3>MENTAL STRESS (Will)</h3>
-            <input class='sheet-input_number' type='number' value='0' min='0' max='5'>
+            <table>
+                <tr>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                </tr>
+                <tr>
+                    <td><h2>1</h2></td>
+                    <td><h2>2</h2></td>
+                    <td><h2>3</h2></td>
+                    <td><h2>4</h2></td>
+                </tr>
+            </table>
         </div>
     </div>
     
+    <div class='sheet-section'>
+    <fieldset class='repeating_corestress'>
     
+        <div class='sheet-col' style='width:49%; text-align:center'>
+            <input class='sheet-input_header' name='attr_corestress' type='text'>
+            <table>
+                <tr>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                </tr>
+                <tr>
+                    <td><h2 style='padding-top:0px'>1</h2></td>
+                    <td><h2 style='padding-top:0px'>2</h2></td>
+                    <td><h2 style='padding-top:0px'>3</h2></td>
+                    <td><h2 style='padding-top:0px'>4</h2></td>
+                </tr>
+            </table>
+        </div>    
+        
+        
+        <div class='sheet-col' style='width:50%; text-align:center; margin-left:3px'>
+            <input class='sheet-input_header' name='attr_corestress' type='text'>
+            <table>
+                <tr>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                    <td><input class='sheet-input_box' type='text'></td>
+                </tr>
+                <tr>
+                    <td><h2>1</h2></td>
+                    <td><h2>2</h2></td>
+                    <td><h2>3</h2></td>
+                    <td><h2>4</h2></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </fieldset>
+       
     <div class='sheet-section'>
         <h3>CONSEQUENCES</h3>
         <div class='sheet-col' style='width:49%'>
