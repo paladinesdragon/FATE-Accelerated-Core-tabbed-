@@ -3,5 +3,6 @@
 	"css": "fate_tabbed.css",
 	"authors": "Matt Higgins",
 	"roll20userid": "974486",
-	"preview": "fate_tabbed.jpg"
+	"preview": "fate_tabbed.jpg",
+	"instructions": "rolltemplate: {{header=<value>}} {{body=<value>}}, accelerated sheet dice roll: modifier determined by number input"
 }
