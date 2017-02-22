@@ -1,0 +1,132 @@
+.charsheet * {
+    box-sizing: border-box;
+    font-family:Verdana;
+}
+
+.sheet-section {
+    width:840px;
+}
+
+.charsheet h3 {
+    color:white;
+    background-color:black;
+    margin-bottom:5px;
+    padding-left:10px;
+}
+
+.sheet-input_text {
+    border: 2px solid black;
+    width:100%;
+    margin-bottom:5px;
+    height:40px;
+}
+
+.sheet-input_number {
+    border: 2px solid black;
+    margin:5px 0px;
+    height:30px;
+    
+}
+
+.charsheet textarea {
+    border: 2px solid black;
+    width:100%;
+    margin-bottom:5px;
+    resize:none;
+}
+
+.sheet-col {
+    margin-bottom:10px;
+}
+
+
+.sheet-box {
+    border: 2px solid black;
+    width:49%;
+    text-align:center;
+    display:inline-block;
+}
+
+.sheet-acc_button {
+   font-weight:bold;
+   border:3px outset #D3D3D3;
+   background-color:white;
+   height:30px;
+   width:95%;
+}
+
+.sheet-core_button {
+   font-weight:bold;
+   border:3px outset #D3D3D3;
+   background-color:white;
+   height:30px;
+   width:200px;
+}
+
+.sheet-acc_button:hover,
+.sheet-core_button:hover {
+    border:3px outset blue;
+}
+
+.sheet-col table {
+    width:100%;
+    text-align:center;
+}
+
+.sheet-page {
+    display:none;
+}
+
+.sheet-tab-button.sheet-accelerated:checked ~ .sheet-page.sheet-accelerated,
+.sheet-tab-button.sheet-core:checked ~ .sheet-page.sheet-core  {
+    display:block;
+}
+
+.sheet-tab-button.sheet-accelerated + span {
+    position: absolute;
+    left:535px;
+    top:45px;
+    width:120px;
+    height:25px;
+    border: 3px outset #D3D3D3;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sheet-tab-button.sheet-core + span {
+    position: absolute;
+    left:660px;
+    top:45px;
+    width:60px;
+    height:25px;
+    border: 3px outset #D3D3D3;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sheet-tab-button.sheet-accelerated:checked + span,
+.sheet-tab-button.sheet-core:checked +span  {
+    border:3px outset blue;
+}
+
+.sheet-tab-button.sheet-accelerated {
+    opacity:0;
+    position: absolute;
+    left:535px;
+    top:45px;
+    width:121px;
+    height:26px;
+    z-index:2;
+}
+
+.sheet-tab-button.sheet-core {
+    opacity:0;
+    position: absolute;
+    left:660px;
+    top:45px;
+    width:61px;
+    height:26px;
+    z-index:2;
+}
