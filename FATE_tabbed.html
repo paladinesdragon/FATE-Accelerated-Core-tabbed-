@@ -33,27 +33,27 @@
             <h3 style='margin-bottom:0px'>APPROACHES</h3>
             <table style='margin-left:5px'>
                 <tr>
-                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=CAREFUL [[4dF + @{careful}]]}}' name='roll_careful'>  CAREFUL</button></td>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=CAREFUL [[4dF + @{careful}]]}}' name='roll_careful'>  CAREFUL</button></td>
                     <td><input class='sheet-input_number' type="number" name="attr_careful" value="0" min='-2' max='8'/></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=CLEVER [[4dF + @{clever}]]}}' name='roll_clever'>  CLEVER</button></td>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=CLEVER [[4dF + @{clever}]]}}' name='roll_clever'>  CLEVER</button></td>
                     <td><input class='sheet-input_number' type="number" name="attr_clever" value="0" min='-2' max='8'/></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=FLASHY [[4dF + @{flashy}]]}}' name='roll_flashy'>  FLASHY</button></td>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=FLASHY [[4dF + @{flashy}]]}}' name='roll_flashy'>  FLASHY</button></td>
                     <td><input class='sheet-input_number' type="number" name="attr_flashy" value="0" min='-2' max='8'/></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=FORCEFUL [[4dF + @{forceful}]]}}' name='roll_forceful'>  FORCEFUL</button></td>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=FORCEFUL [[4dF + @{forceful}]]}}' name='roll_forceful'>  FORCEFUL</button></td>
                     <td><input class='sheet-input_number' type="number" name="attr_forceful" value="0" min='-2' max='8'/></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=QUICK [[4dF + @{quick}]]}}' name='roll_quick'>  QUICK</button></td>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=QUICK [[4dF + @{quick}]]}}' name='roll_quick'>  QUICK</button></td>
                     <td><input class='sheet-input_number' type="number" name="attr_quick" value="0" min='-2' max='8'/></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=SNEAKY [[4dF + @{sneaky}]]}}' name='roll_sneaky'>  SNEAKY</button></td>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=SNEAKY [[4dF + @{sneaky}]]}}' name='roll_sneaky'>  SNEAKY</button></td>
                     <td><input class='sheet-input_number' type="number" name="attr_sneaky" value="0" min='-2' max='8'/></td>
                 </tr>
             </table>
@@ -143,7 +143,7 @@
           <h3>SKILLS</h3>
             <table>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=LEGENDARY [[4dF + 8]]}}'>  Legendary (+8)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=LEGENDARY [[4dF + 8]]}}'>  Legendary (+8)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -151,7 +151,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=EPIC [[4dF + 7]]}}'>  Epic (+7)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=EPIC [[4dF + 7]]}}'>  Epic (+7)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -159,7 +159,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=FANTASTIC [[4dF + 6]]}}'>  Fantastic (+6)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=FANTASTIC [[4dF + 6]]}}'>  Fantastic (+6)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -167,7 +167,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=SUPERB [[4dF + 5]]}}'>  Superb (+5)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=SUPERB [[4dF + 5]]}}'>  Superb (+5)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -175,7 +175,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=GREAT [[4dF + 4]]}}'>  Great (+4)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=GREAT [[4dF + 4]]}}'>  Great (+4)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -183,7 +183,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=GOOD [[4dF + 3]]}}'>  Good (+3)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=GOOD [[4dF + 3]]}}'>  Good (+3)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -191,7 +191,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=FAIR [[4dF + 2]]}}'>  Fair (+2)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=FAIR [[4dF + 2]]}}'>  Fair (+2)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -199,7 +199,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=AVERAGE [[4dF + 1]]}}'>  Average (+1)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=AVERAGE [[4dF + 1]]}}'>  Average (+1)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -207,7 +207,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=MEDIOCRE [[4dF + 0]]}}'>  Mediocre (+0)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=MEDIOCRE [[4dF + 0]]}}'>  Mediocre (+0)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -215,7 +215,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=POOR [[4dF + -1]]}}'>  Poor (-1)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=POOR [[4dF + -1]]}}'>  Poor (-1)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -223,7 +223,7 @@
                     <td><input class='sheet-input_text' type='text'></td>
                 </tr>
                 <tr>
-                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{name=@{character_name}}} {{approach=TERRIBLE [[4dF + -2]]}}'>  Terrible (-2)</button></td>
+                    <td><button class='sheet-core_button' style='margin-left:0px; margin-top:-5px' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=TERRIBLE [[4dF + -2]]}}'>  Terrible (-2)</button></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
                     <td><input class='sheet-input_text' type='text'></td>
@@ -374,7 +374,7 @@
 <!-- Roll Template -->
 <rolltemplate class="sheet-rolltemplate-fate">
     <table style='border:5px outset blue; width:200px; text-align:center'>
-        <tr><th style='color:white; background-color:black; font-size:16px; padding:10px'>{{name}}</th></tr>
-        <td style='padding:10px'><b>{{approach}}</b></td>
+        <tr><th style='color:white; background-color:black; font-size:16px; padding:10px'>{{header}}</th></tr>
+        <td style='padding:10px'><b>{{body}}</b></td>
     </table>
 </rolltemplate>
