@@ -18,14 +18,11 @@
     border: 2px solid black;
     width:100%;
     margin-bottom:5px;
-    height:40px;
 }
 
 .sheet-input_number {
     border: 2px solid black;
-    margin:5px 0px;
-    height:30px;
-    
+    margin:5px;
 }
 
 .charsheet textarea {
