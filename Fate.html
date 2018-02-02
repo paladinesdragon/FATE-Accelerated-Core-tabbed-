@@ -1,0 +1,1139 @@
+<div class='sheet-container'>
+
+    <input class='sheet-tab-button accelerated' type="radio" name="attr_tab" value="accelerated"><span>ACCELERATED</span>
+    <input class='sheet-tab-button core' type="radio" name="attr_tab" value="core"><span>CORE</span>
+    <input class='sheet-tab-button game' type="radio" name="attr_tab" value="game" title="Game Creation Worksheet"><span>GAME</span>
+    <input class='sheet-tab-button character' type="radio" name="attr_tab" value="character" title="Character Creation Worksheet"><span>CHARACTER</span>
+    <input class='sheet-tab-button race' type="radio" name="attr_tab" value="race" title="Race Creation Worksheet"><span>RACE</span>
+
+<!-- Accelerated Sheet -->
+<div class='sheet-page accelerated'>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:60%'>
+            <h3>ID</h3>
+                <input class='sheet-input_text' type='text' name='attr_character_name' placeholder='Character Name'>
+                <textarea style='height:153px' name='attr_char_desc' placeholder='Character Description'></textarea>
+        </div>
+        <div class='sheet-col' style='width:39%; margin-left:3px'>
+            <img src='http://3.bp.blogspot.com/-O6YJeO461bg/Vgpptwxc5xI/AAAAAAAAIuU/DRT2ojgxCFI/s1600/fate_accelerated_logo.png'>
+            <div class='sheet-box' style='margin-right:0px; margin-left:1px'><h5>Refresh</h5><input class='sheet-input_number' type='number' name='attr_refresh' value='0' min='0' max='10'></div>
+            <div class='sheet-box'><h5>Current Fate Points</h5><input class='sheet-input_number' type='number' name='attr_fate_points' value='0' min='0' max='10'></div>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:70%'>
+            <h3>ASPECTS</h3>
+            <input class='sheet-input_text' type='text' name='attr_high_concept' placeholder='High Concept'>
+            <input class='sheet-input_text' type='text' name='attr_trouble' placeholder='Trouble'>
+            <input class='sheet-input_text' name='attr_aspect_desc1' type='text'>
+            <input class='sheet-input_text' name='attr_aspect_desc2' type='text'>
+            <input class='sheet-input_text' name='attr_aspect_desc3' type='text'>
+            <fieldset class="repeating_aspects">
+            <input class='sheet-input_text' name='attr_aspect_desc' type='text'>
+            </fieldset>
+        </div>
+    
+        <div class='sheet-col' style='width:29%; margin-left:3px'>
+            <h3 style='margin-bottom:0px'>APPROACHES</h3>
+            <table style='margin-left:5px'>
+                <tr>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=CAREFUL [[4dF + @{careful}]]}}' name='roll_careful'>  CAREFUL</button></td>
+                    <td><input class='sheet-input_number' type="number" name="attr_careful" value="0" min='-2' max='8'/></td>
+                </tr>
+                <tr>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=CLEVER [[4dF + @{clever}]]}}' name='roll_clever'>  CLEVER</button></td>
+                    <td><input class='sheet-input_number' type="number" name="attr_clever" value="0" min='-2' max='8'/></td>
+                </tr>
+                <tr>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=FLASHY [[4dF + @{flashy}]]}}' name='roll_flashy'>  FLASHY</button></td>
+                    <td><input class='sheet-input_number' type="number" name="attr_flashy" value="0" min='-2' max='8'/></td>
+                </tr>
+                <tr>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=FORCEFUL [[4dF + @{forceful}]]}}' name='roll_forceful'>  FORCEFUL</button></td>
+                    <td><input class='sheet-input_number' type="number" name="attr_forceful" value="0" min='-2' max='8'/></td>
+                </tr>
+                <tr>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=QUICK [[4dF + @{quick}]]}}' name='roll_quick'>  QUICK</button></td>
+                    <td><input class='sheet-input_number' type="number" name="attr_quick" value="0" min='-2' max='8'/></td>
+                </tr>
+                <tr>
+                    <td><button class='sheet-acc_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=SNEAKY [[4dF + @{sneaky}]]}}' name='roll_sneaky'>  SNEAKY</button></td>
+                    <td><input class='sheet-input_number' type="number" name="attr_sneaky" value="0" min='-2' max='8'/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>STUNTS</h3>
+            <textarea style='height:200px' name='attr_stunt'></textarea>
+            <fieldset class='repeating_stunts'>
+                <textarea name='attr_stunt_desc' style='height:200px'></textarea>
+            </fieldset>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:40%'>
+            <h3>STRESS</h3>
+            <table>
+                <tr>
+                    <td><input class='sheet-input_box' name='attr_stress1' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_stress2' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_stress3' type='text'></td>
+                </tr>
+                <tr>
+                    <td><h2>1</h2></td>
+                    <td><h2>2</h2></td>
+                    <td><h2>3</h2></td>
+                </tr>
+            </table>
+        </div>
+   
+        <div class='sheet-col' style='width:59%; margin-left:3px'>
+            <h3>CONSEQUENCES</h3>
+            <table>
+                <tr>
+                    <td style='width:10px'><h2>2</h2></td>
+                    <td><input class='sheet-input_text' type='text' name='attr_con_mild' placeholder='MILD'></td>
+                </tr>
+                <tr>
+                    <td><h2>4</h2></td>
+                    <td><input class='sheet-input_text' type='text' name='attr_con_mod' placeholder='MODERATE'></td>
+                </tr>
+                <tr>
+                    <td><h2>6</h2></td>
+                    <td><input class='sheet-input_text' type='text' name='attr_con_sev' placeholder='SEVERE'></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Core Sheet -->
+<div class='sheet-page core'>
+    
+    <div class='sheet-section'>
+        <h3>ID 
+            <select name='attr_role' title="Character Type" value='PC' style='margin-bottom:1px; margin-left:10px; width:140px; border:1px solid blue'>
+                <option>PC</option>
+                <option>Nameless NPC</option>
+                <option>Supporting NPC</option>
+                <option>Main NPC</option>
+            </select>
+        </h3>
+            <div class='sheet-col' style='width:54%'>
+                <input class='sheet-input_text' type='text' name='attr_character_name+(@{race_name})' placeholder='Character Name'>
+                <textarea style='height:90px' name='attr_char_desc' placeholder='Brief Character Description'></textarea>
+            </div>
+                    
+            <div class='sheet-col' style='border:2px solid black; text-align:center; width:20%; margin-left:2px; height:125px'>
+                <div>
+                <h5 style='text-align:center'>Refresh</h5>
+                <input class='sheet-input_number' type='number' name='attr_refresh' value='3' min='0' max='10'>
+                </div>
+                <div>
+                <h5 style='text-align:center'>Current Fate Points</h5>
+                <input class='sheet-input_number' type='number' name='attr_fate_points' value='0' min='0' max='10'>
+                </div>
+            </div>
+      
+            <div class='sheet-col' style='width:24%; margin-left:4px'>
+                <img src='http://3.bp.blogspot.com/-bJjDZ-FtpHQ/ULRW6uKF3JI/AAAAAAAAAh8/PRrdYkH2fi8/s1600/Fate%2BCore%2BCover.png' alt='fate logo' style='width:100%; height:125px'>
+            </div>
+    </div>    
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>ASPECTS</h3>
+            <input class='sheet-input_text' type='text' name='attr_high_concept' placeholder='High Concept'>
+            <input class='sheet-input_text' type='text' name='attr_trouble' placeholder='Trouble'>
+            <input class='sheet-input_text' name='attr_aspect_desc1' type='text' placeholder='Phase One Aspect'>
+            <input class='sheet-input_text' name='attr_aspect_desc2' type='text' placeholder='Phase Two Aspect'>
+            <input class='sheet-input_text' name='attr_aspect_desc3' type='text' placeholder='Phase Three Aspect'>
+            <fieldset class="repeating_aspects">
+            <input class='sheet-input_text' name='attr_aspect_desc' type='text'>
+            </fieldset>
+        </div>
+    </div>   
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+          <h3>SKILLS <input title='number of banked skill points' class='sheet-input_num_header' type='number' style='margin-left:700px; height:21px;' name='attr_skill_points' placeholder='0' min='0' max='8'></h3>
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='+8'>Legendary</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Leg_skillname1} [[4dF + 8]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Leg_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Leg_skillname2} [[4dF + 8]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Leg_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Leg_skillname3} [[4dF + 8]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Leg_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Leg_skillname4} [[4dF + 8]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Leg_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Leg_skillname5} [[4dF + 8]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Leg_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='+7'>Epic</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Epic_skillname1} [[4dF + 7]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Epic_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Epic_skillname2} [[4dF + 7]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Epic_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Epic_skillname3} [[4dF + 7]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Epic_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Epic_skillname4} [[4dF + 7]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Epic_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Epic_skillname5} [[4dF + 7]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Epic_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='+6'>Fantastic</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fan_skillname1} [[4dF + 6]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Fan_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fan_skillname2} [[4dF + 6]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Fan_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fan_skillname3} [[4dF + 6]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Fan_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fan_skillname4} [[4dF + 6]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Fan_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fan_skillname5} [[4dF + 6]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Fan_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='+5'>Superb</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Sup_skillname1} [[4dF + 5]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Sup_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Sup_skillname2} [[4dF + 5]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Sup_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Sup_skillname3} [[4dF + 5]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Sup_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Sup_skillname4} [[4dF + 5]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Sup_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Sup_skillname5} [[4dF + 5]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Sup_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='+4'>Great</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Great_skillname1} [[4dF + 4]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Great_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Great_skillname2} [[4dF + 4]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Great_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Great_skillname3} [[4dF + 4]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Great_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Great_skillname4} [[4dF + 4]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Great_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Great_skillname5} [[4dF + 4]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Great_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='+3'>Good</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Good_skillname1} [[4dF + 3]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Good_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Good_skillname2} [[4dF + 3]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Good_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Good_skillname3} [[4dF + 3]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Good_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Good_skillname4} [[4dF + 3]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Good_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Good_skillname5} [[4dF + 3]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Good_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='+2'>Fair</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fair_skillname1} [[4dF + 2]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Fair_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fair_skillname2} [[4dF + 2]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Fair_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fair_skillname3} [[4dF + 2]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Fair_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fair_skillname4} [[4dF + 2]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Fair_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Fair_skillname5} [[4dF + 2]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Fair_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='+1'>Average</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ave_skillname1} [[4dF + 1]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Ave_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ave_skillname2} [[4dF + 1]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Ave_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ave_skillname3} [[4dF + 1]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Ave_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ave_skillname4} [[4dF + 1]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Ave_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ave_skillname5} [[4dF + 1]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Ave_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='+0'>Mediocre</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Med_skillname1} [[4dF + 0]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Med_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Med_skillname2} [[4dF + 0]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Med_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Med_skillname3} [[4dF + 0]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Med_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Med_skillname4} [[4dF + 0]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Med_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Med_skillname5} [[4dF + 0]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Med_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='-1'>Poor</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Poor_skillname1} [[4dF + -1]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Poor_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Poor_skillname2} [[4dF + -1]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Poor_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Poor_skillname3} [[4dF + -1]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Poor_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Poor_skillname4} [[4dF + -1]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Poor_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Poor_skillname5} [[4dF + -1]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Poor_skillname5' type='text'>
+            </div>
+        </div>
+        
+        <div class='sheet-row' style='margin-bottom:5px;'>
+            <div class='sheet-col' style='border-right: 1px solid gray'>
+                <h4 title='-2'>Terrible</h4>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ter_skillname1} [[4dF + -2]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Ter_skillname1' type='text'>
+            </div>
+           
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ter_skillname2} [[4dF + -2]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Ter_skillname2' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ter_skillname3} [[4dF + -2]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Ter_skillname3' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='border-right: 1px solid gray; margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ter_skillname4} [[4dF + -2]]}}'></button>
+                <input class='sheet-input_text_coreskill' name='attr_Ter_skillname4' type='text'>
+            </div>
+            
+            <div class='sheet-col' style='margin-left:2px'>    
+                <button style='margin-left:1px' class='sheet-core_button' type='roll' value='&{template:fate} {{header=@{character_name}}} {{body=@{Ter_skillname5} [[4dF + -2]]}}'></button>
+                <input class='sheet-input_text_coreskill' style='margin-right:0px;' name='attr_Ter_skillname5' type='text'>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        
+        <div class='sheet-col' style='width:49%'>
+            <h3>STUNTS</h3>
+                <textarea style='height:200px' name='attr_stunt'></textarea>
+                    <fieldset class='repeating_stunts'>
+                        <textarea style='height:200px' name='attr_stunt_desc'></textarea>
+                    </fieldset>
+        </div>
+        
+        <div class='sheet-col' style='width:50%; margin-left:3px'>
+            <h3>EXTRAS</h3>
+                <textarea style='height:200px' name='attr_extra'></textarea>
+                    <fieldset class='repeating_extras'>
+                        <textarea style='height:200px' name='attr_extra_desc'></textarea>
+                    </fieldset>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:49%'>
+            <table>
+                <h3>PHYSICAL STRESS (Physique) <input title='number of boxes you can use' class='sheet-input_num_header' type='number' style='height:21px; margin-left:43px' name='attr_phys_stress_num' value='0' min='0' max='8'></h3>
+                <tr>
+                    <td><input class='sheet-input_box' name='attr_phys_stress1' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_phys_stress2' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_phys_stress3' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_phys_stress4' type='text'></td>
+                </tr>
+                <tr>
+                    <td><h2>1</h2></td>
+                    <td><h2>2</h2></td>
+                    <td><h2>3</h2></td>
+                    <td><h2>4</h2></td>
+                </tr>
+            </table>
+            
+            <table>
+                <h3>MENTAL STRESS (Will) <input title='number of boxes you can use' class='sheet-input_num_header' type='number' style='height:21px; margin-left:116px' name='attr_ment_stress_num' value='0' min='0' max='8'></h3>
+                <tr>
+                    <td><input class='sheet-input_box' name='attr_ment_stress1' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_ment_stress2' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_ment_stress3' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_ment_stress4' type='text'></td>
+                </tr>
+                <tr>
+                    <td><h2>1</h2></td>
+                    <td><h2>2</h2></td>
+                    <td><h2>3</h2></td>
+                    <td><h2>4</h2></td>
+                </tr>
+            </table>
+        
+        <fieldset class='repeating_corestress'>
+            <table>
+                <h3><input class='sheet-input_header' name='attr_stress_name' type='text' placeholder='Stress Name (skill)'> <input title='number of boxes you can use' class='sheet-input_num_header' type='number' style='height:23px; margin-left:105px; margin-bottom:1px;' name='attr_name_stress_num' value='0' min='0' max='8'></h3>
+                    <td><input class='sheet-input_box' name='attr_stress_box1' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_stress_box2' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_stress_box3' type='text'></td>
+                    <td><input class='sheet-input_box' name='attr_stress_box4' type='text'></td>
+                </tr>
+                <tr>
+                    <td><h2>1</h2></td>
+                    <td><h2>2</h2></td>
+                    <td><h2>3</h2></td>
+                    <td><h2>4</h2></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+   
+        
+        <div class='sheet-col' style='width:50%; margin-left:3px;'>
+           <h3>CONSEQUENCES</h3>
+                <table>
+                <tr>
+                    <td style='width:5%'><h2>2</h2></td>
+                    <td><input class='sheet-input_text' type='text' name='attr_con_mild' placeholder='MILD'></td>
+                </tr>
+                <tr>
+                    <td><h2>4</h2></td>
+                    <td><input class='sheet-input_text' type='text' name='attr_con_mod' placeholder='MODERATE'></td>
+                </tr>
+                <tr>
+                    <td><h2>6</h2></td>
+                    <td><input class='sheet-input_text' type='text' name='attr_con_sev' placeholder='SEVERE'></td>
+                </tr>
+                </table>
+                
+                <div class='sheet-row'>
+                    <fieldset class='repeating_consequences'>    
+                        <select class='sheet-input_text' name='attr_conlevel' style='width:31.9%;height:30px;font-weight:bold'>
+                            <option>2 MILD</option>
+                            <option>4 MODERATE</option>
+                            <option>6 SEVERE</option>
+                            <option>8 EXTREME</option>
+                        </select>
+                        <input class='sheet-input_text' name='attr_con_desc' type='text' style="width:67%">
+                      </fieldset>
+                </div> 
+        </div>
+    </div>
+</div>
+
+<!-- Game Creation Worksheet -->
+<div class='sheet-page game'>
+    
+    <div class='sheet-section'style='margin-bottom:10px;'>
+        <div class='sheet-col' style='width:20%; margin-left:4px'>
+            <img src='http://3.bp.blogspot.com/-bJjDZ-FtpHQ/ULRW6uKF3JI/AAAAAAAAAh8/PRrdYkH2fi8/s1600/Fate%2BCore%2BCover.png' alt='fate logo' style='width:100%; height:90px'>
+        </div>
+    
+        <div class='sheet-col' style='margin-left:15px;margin-top:20px;'>
+            <h1>Game Creation Worksheet</h1>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <input class='sheet-input_text' type='text' name='attr_game_name' placeholder='Game Name'>
+            <input class='sheet-input_text' type='text' name='attr_setting_scale' placeholder='Setting/Scale'>
+        </div>
+    </div> 
+    
+    <div class='sheet-section'>
+        <h3>ISSUES</h3>
+            <div class='sheet-col' style='width:49%'>
+                <textarea style='height:200px' name='attr_current_issues' placeholder="Current Issues"></textarea>
+            </div>
+        
+            <div class='sheet-col' style='width:50%; margin-left:3px'>
+                <textarea style='height:200px' name='attr_impending_issues' placeholder="Impending Issues"></textarea>
+            </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>WORLD ASPECTS</h3>
+                <input class='sheet-input_text' type='text' name='attr_worldaspect' placeholder='World Aspect'>
+                    <fieldset class='repeating_worldaspects'>
+                        <input class='sheet-input_text' type='text' name='attr_worldaspect_desc'>
+                    </fieldset>
+        </div>
+    </div>
+    
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:50%'>
+            <div class='sheet-col' style='width:100%'>
+                <h3>Dials</h3>
+            </div>
+            <div style='margin-left:10%'>
+                <div class='sheet-row' style='margin-bottom:5px'>
+                    <div class='sheet-col' style='text-align:right;height:30px;padding-top:8px;width:55%;margin-right:10px'>  
+                        <p>Number of aspects</p>
+                    </div>
+                    <div class='sheet-col'>
+                        <input style='border: 2px solid black;text-align:center;font-weight:bold' type="number" name="attr_num_aspects" value="5"/>
+                    </div>
+                </div>
+                <div class='sheet-row' style='margin-bottom:5px'>
+                    <div class='sheet-col' style='text-align:right;height:30px;padding-top:8px;width:55%;margin-right:10px'> 
+                        <p>Number of phases</p>
+                    </div>
+                    <div class='sheet-col'>
+                        <input style='border: 2px solid black;text-align:center;font-weight:bold' type="number" name="attr_num_phases" value="3"/>
+                    </div>
+                </div>
+                <div class='sheet-row' style='margin-bottom:5px'>
+                    <div class='sheet-col' style='text-align:right;height:30px;padding-top:8px;width:55%;margin-right:10px'> 
+                        <p>Skill cap</p>
+                    </div>
+                    <div class='sheet-col'>
+                        <input class='sheet-input_text_dials' type="text" name="attr_skill_cap" placeholder='Great (+4)'/>
+                    </div>
+                </div>
+                <div class='sheet-row' style='margin-bottom:5px'>
+                    <div class='sheet-col' style='text-align:right;height:30px;padding-top:8px;width:55%;margin-right:10px'> 
+                        <p>Skill pyramid or columns</p>
+                    </div>
+                    <div class='sheet-col'>
+                        <input class='sheet-input_text_dials' type="text" name="attr_pyramid_column" placeholder="Pyramid"/>
+                    </div>
+                </div>
+                <div class='sheet-row' style='margin-bottom:5px'>
+                    <div class='sheet-col' style='text-align:right;height:30px;padding-top:8px;width:55%;margin-right:10px'> 
+                        <p>Refresh rate</p>
+                    </div>
+                    <div class='sheet-col'>
+                        <input style='border: 2px solid black;text-align:center;font-weight:bold' type="number" name="attr_refresh_rate" value="3"/>
+                    </div>
+                </div>
+                <div class='sheet-row' style='margin-bottom:5px'>
+                    <div class='sheet-col' style='text-align:right;height:30px;padding-top:8px;width:55%;margin-right:10px'> 
+                        <p>Number of initial stunts</p>
+                    </div>
+                    <div class='sheet-col'>
+                        <input style='border: 2px solid black;text-align:center;font-weight:bold' type="number" name="attr_num_stunts" value="3"/>
+                    </div>
+                </div>
+                <div class='sheet-row' style='margin-bottom:5px'>
+                    <div class='sheet-col' style='text-align:right;height:30px;padding-top:8px;width:55%;margin-right:10px'> 
+                        <p>Types of stress tracks</p>
+                    </div>
+                    <div class='sheet-col'>
+                        <input class='sheet-input_text_dials' type="text" name="attr_stress_types" placeholder="Physical and mental"/>
+                    </div>
+                </div>
+                <div class='sheet-row' style='margin-bottom:5px'>
+                    <div class='sheet-col' style='text-align:right;height:30px;padding-top:8px;width:55%;margin-right:10px'> 
+                        <p>Default number of stress boxes</p>
+                    </div>
+                    <div class='sheet-col'>
+                        <input style='border: 2px solid black;text-align:center;font-weight:bold' type="number" name="attr_num_stressbox" value="2"/>
+                    </div>
+                </div>
+                <div class='sheet-row' style='margin-bottom:5px'>
+                    <div class='sheet-col' style='text-align:right;height:30px;padding-top:8px;width:55%;margin-right:10px'> 
+                        <p>Default consequence slots</p>
+                    </div>
+                    <div class='sheet-col'>
+                        <input class='sheet-input_text_dials' type="text" name="attr_consequence_slots" placeholder='2/4/6'/>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class='sheet-col' style='width:49.2%;margin-left:2px;'>   
+            <div class='sheet-col' style='width:100%'>
+                <h3>Skills</h3>
+            </div>
+            <div class='sheet-row' style='margin-bottom:5px'>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_A1"/>
+                </div>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_A2"/>
+                </div>
+                <div class='sheet-col'>
+                    <input class='sheet-input_text_skills' type="text" name="attr_skill_A3"/>
+                </div>
+            </div>
+            <div class='sheet-row' style='margin-bottom:5px'>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_B1"/>
+                </div>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_B2"/>
+                </div>
+                <div class='sheet-col'>
+                    <input class='sheet-input_text_skills' type="text" name="attr_skill_B3"/>
+                </div>
+            </div>
+            <div class='sheet-row' style='margin-bottom:5px'>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_C1"/>
+                </div>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_C2"/>
+                </div>
+                <div class='sheet-col'>
+                    <input class='sheet-input_text_skills' type="text" name="attr_skill_C3"/>
+                </div>
+            </div>
+            <div class='sheet-row' style='margin-bottom:5px'>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_D1"/>
+                </div>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_D2"/>
+                </div>
+                <div class='sheet-col'>
+                    <input class='sheet-input_text_skills' type="text" name="attr_skill_D3"/>
+                </div>
+            </div>
+            <div class='sheet-row' style='margin-bottom:5px'>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_E1"/>
+                </div>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_E2"/>
+                </div>
+                <div class='sheet-col'>
+                    <input class='sheet-input_text_skills' type="text" name="attr_skill_E3"/>
+                </div>
+            </div>
+            <div class='sheet-row' style='margin-bottom:5px'>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_F1"/>
+                </div>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_F2"/>
+                </div>
+                <div class='sheet-col'>
+                    <input class='sheet-input_text_skills' type="text" name="attr_skill_F3"/>
+                </div>
+            </div>
+             <div class='sheet-row' style='margin-bottom:5px'>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_G1"/>
+                </div>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_G2"/>
+                </div>
+                <div class='sheet-col'>
+                    <input class='sheet-input_text_skills' type="text" name="attr_skill_G3"/>
+                </div>
+            </div>
+             <div class='sheet-row' style='margin-bottom:5px'>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_H1"/>
+                </div>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_H2"/>
+                </div>
+                <div class='sheet-col'>
+                    <input class='sheet-input_text_skills' type="text" name="attr_skill_H3"/>
+                </div>
+            </div>
+             <div class='sheet-row' style='margin-bottom:5px'>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_I1"/>
+                </div>
+                <div class='sheet-col'>
+                    <input style='margin-right:2px' class='sheet-input_text_skills' type="text" name="attr_skill_I2"/>
+                </div>
+                <div class='sheet-col'>
+                    <input class='sheet-input_text_skills' type="text" name="attr_skill_I3"/>
+                </div>
+            </div>
+        </div>
+    </div>   
+   
+
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>STUNTS AND EXTRAS</h3>
+               <textarea style='height:200px' name='attr_stunts_extras'></textarea> 
+        </div>
+        
+    </div>
+    
+     <div class='sheet-section'>
+        <h3>FACES AND PLACES</h3>
+            <div class='sheet-col' style='width:32.9%'>
+                <textarea style='height:200px' name='attr_facesandplaces1' placeholder="Name
+Issues/Aspect"></textarea>
+            </div>    
+            <div class='sheet-col' style='width:33%'>
+                <textarea style='height:200px' name='attr_facesandplaces2'placeholder="Name
+Issues/Aspect"></textarea>
+            </div> 
+            <div class='sheet-col' style='width:32.9%'>
+                <textarea style='height:200px' name='attr_facesandplaces3'placeholder="Name
+Issues/Aspect"></textarea>
+            </div> 
+                    
+            <fieldset class='repeating_facesandplaces'>
+                <div class='sheet-col' style='width:32.9%'>
+                    <textarea style='height:200px' name='attr_facesandplacesA_desc'></textarea>
+                </div>    
+                <div class='sheet-col' style='width:33%'>
+                    <textarea style='height:200px' name='attr_facesandplacesB_desc'></textarea>
+                </div> 
+                <div class='sheet-col' style='width:32.9%'>
+                    <textarea style='height:200px' name='attr_facesandplacesC_desc'></textarea>
+                </div> 
+            </fieldset>
+    </div>
+    
+</div>
+
+<!-- Character Creation Worksheet -->
+<div class='sheet-page character'>
+    <div style='margin-bottom:10px;'>
+        <h1>Character Creation Worksheet</h1>
+    </div>
+    <div class='sheet-section'>
+        <h3>CHARACTER IDEA</h3>
+        <input class='sheet-input_text' type='text' name='attr_high_concept' placeholder='High Concept Idea'>
+        <input class='sheet-input_text' type='text' name='attr_trouble' placeholder='Trouble Aspect'>
+        <input class='sheet-input_text' type='text' name='attr_character_name' placeholder='Character Name'>
+    </div>
+    
+    <div class='sheet-section'>
+        <h3>PHASE TRIO</h3>
+        <textarea style='height:200px' placeholder='Phase One: Your Adventure'></textarea>
+        <input class='sheet-input_text' type='text' name='attr_aspect_desc1' placeholder='Phase One Aspect'>
+        <textarea style='height:200px' placeholder='Phase Two: Crossing Paths'></textarea>
+        <input class='sheet-input_text' type='text' name='attr_aspect_desc2' placeholder='Phase Two Aspect'>
+        <textarea style='height:200px' placeholder='Phase Three: Crossing Paths Again'></textarea>
+        <input class='sheet-input_text' type='text' name='attr_aspect_desc3' placeholder='Phase Three Aspect'>
+        <fieldset class='repeating_aspects'>
+            <textarea style='height:200px'></textarea>
+            <input class='sheet-input_text' type='text' name='attr_aspect_desc'>
+        </fieldset>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:50%'>
+            <h3>SKILLS</h3>
+                <div class='sheet-col' style='width:42%'>
+                    <h5>Default Settings</h5>
+                    <ul>
+                        <li style='margin-bottom:3px'>One at Great (+4)</li>
+                        <li style='margin-bottom:3px'>Two at Good (+3)</li>
+                        <li style='margin-bottom:3px'>Three at Fair (+2)</li>
+                        <li style='margin-bottom:3px'>Four at Average (+1)</li>
+                    </ul>
+                </div>
+                
+                <div class='sheet-col' style='width:34%'>
+                    <h5>Default Ladder</h5>
+                    <ul>
+                        <li style='height:18px; margin-bottom:3px'>Legendary (+8)</li>
+                        <li style='height:18px; margin-bottom:3px'>Epic (+7)</li>
+                        <li style='height:18px; margin-bottom:3px'>Fantastic (+6)</li>
+                        <li style='height:18px; margin-bottom:3px'>Superb (+5)</li>
+                        <li style='height:18px; margin-bottom:3px'>Great (+4)</li>
+                        <li style='height:18px; margin-bottom:3px'>Good (+3)</li>
+                        <li style='height:18px; margin-bottom:3px'>Fair (+2)</li>
+                        <li style='height:18px; margin-bottom:3px'>Average (+1)</li>
+                        <li style='height:18px; margin-bottom:3px'>Mediocre (+0)</li>
+                        <li style='height:18px; margin-bottom:3px'>Poor (-1)</li>
+                        <li style='height:18px;'>Terrible (-2)</li>
+                    </ul>
+                </div>
+                
+                <div class='sheet-col' style='width:21%'>
+                    <h5>Custom</h5>
+                    <table>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Leg_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Epic_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Fan_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Sup_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Great_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Good_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Fair_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Avg_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Med_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Poor_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                        <tr>
+                            <tr><input type='number' title='number of Skills' name='attr_Ter_num' class='sheet-input_num_header' value='0' min='0' max='5' style='height:18px;'></tr>
+                        </tr>
+                    </table>
+                </div>
+        </div>    
+        
+        <div class='sheet-col' style='width:49%'>
+            <h3>STUNTS & REFRESH</h3>
+                <ul>
+                    <li style='margin-bottom:3px'>Three Stunts = Refresh of 3</li>
+                    <li style='margin-bottom:3px'>Four Stunts = Refresh of 2</li>
+                    <li style='margin-bottom:3px'>Five Stunts = Refresh of 1</li>
+                </ul>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <h3>STRESS & CONSEQUENCES</h3>
+            <ul>
+                <li style='margin-bottom:3px'>Average or Fair Physique gives you a 3-point physical stress box.</li>
+                <li style='margin-bottom:3px'>Good or Great Physique gives you 3- and 4-point physical stress boxes.</li>
+                <li style='margin-bottom:3px'>Superb+ Physique gives you 3- and 4-point physical stress boxes and an additional mild consequence slot.</li>
+                <li style='margin-bottom:3px'>Average or Fair Will gives you a 3-point mental stress box.</li>
+                <li style='margin-bottom:3px'>Good or Great Will gives you 3- and 4-point mental stress boxes.</li>
+                <li style='margin-bottom:3px'>Superb+ Will gives you 3- and 4-point mental stress boxes and an additional mild consequence slot.</li>
+            </ul>
+    </div>
+</div>
+
+<div class='sheet-page race'>
+    <h1 style='margin-bottom:10px'>Race Creation Worksheet</h1>
+    <div class='sheet-section'>
+        <div class='sheet-col'>
+           <h3>INTRO</h3>
+           <p class='sheet-par'>We as humans are the most adaptable, versatile, and social species on this planet. We use tools to achieve things other species—probably smarter, faster,
+              and more resilient than us could not. We use speech to coordinate and plan activities that not even the most strategic pack hunting predators could
+              match. We use speech to teach future generations, thus eliminating the tedious 'trial by error' and significantly reducing adaptation times. And we
+              use those abilities and more to dominate our environment making us the dominate species on this planet we call Earth. 
+           </p>
+           <h4 style='width:100%'>Dominate Species Criteria (playable race):</h4>
+           <p class='sheet-par'>Adaptable, ability to communicate, social, some measure of reasoning, ability to reproduce, and the ability or tools to change the environment to fit
+              their needs and further the species.
+            </p>
+            <p class='sheet-par'>
+                <b>NOTE:</b> The better the species fits the planet in which it inhabits the more believable it will be.
+                Try to make reasons for their existence and the way they look, act, etc. plausible in some way.
+            </p>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>BIOLOGICAL PECULIARITIES & APPEARANCE</h3>
+            <textarea style='height:200px;' name='attr_race_biology_appear' placeholder='Looking at other animals on Earth is a good way to get ideas for peculiar triats and appearance. Also things like: What do they eat or drink? How much sleep do they require? Do they breath oxygen? Life span? What age do they mature to an adult? Average size? Language?'></textarea>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>SOCIAL LIFE & STRUCTURE</h3>
+            <textarea style='height:200px;' name='attr_race_soclife' placeholder=''></textarea>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>SEXUAL LIFE & PROCREATION</h3>
+            <textarea style='height:200px;' name='attr_race_sexlife' placeholder='When it comes to alien sex; the weirder, the better'></textarea>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>POLITICAL STRUCTURE</h3>
+            <textarea style='height:200px;' name='attr_race_pol' placeholder=''></textarea>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>RELIGION</h3>
+            <textarea style='height:200px;' name='attr_race_relig' placeholder=''></textarea>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>ECONOMY</h3>
+            <textarea style='height:200px;' name='attr_race_econ' placeholder='Abundant resources and ones that are in need.'></textarea>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>PSYCHOLOGY</h3>
+            <textarea style='height:200px;' name='attr_race_psyc' placeholder='This is their instincts and how they affect their thinking, their emotions and how they influence their decision, their propensity toward something or their aversion to another.'></textarea>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>HISTORY</h3>
+            <textarea style='height:200px;' name='attr_race_history' placeholder=''></textarea>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div class='sheet-section' style='width:300px; margin-left:auto; margin-right:auto;'>
+        <table style='width:290px;'>
+            <tr>
+                <td><th class='sheet-float' style='border:none'>RACE:</th></td>
+                <td><input style='padding-left:2px' type='text' class='sheet-float' name='attr_race_name'></td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-section'>
+        <p class='sheet-par'><b>NOTE:</b>The following should be about what is inherant to this race/species or what is generally
+        or commonly known about this race. This would not be things like training, professions, or personal characteristics.</p>
+    </div>
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>ASPECT</h3>
+            <p class='sheet-par'><b>When creating this race/species,</b> using the information above, describe 5 aspects that are specific to this race/species.</p>
+            <p class='sheet-par'><b>When using this race/species for your character,</b> choose at least one from the following aspects, but not more than two.</p>
+            <input class='sheet-input_text' type='text' name='attr_race_aspect1' style='' placeholder=''>
+            <input class='sheet-input_text' type='text' name='attr_race_aspect2' style='' placeholder=''>
+            <input class='sheet-input_text' type='text' name='attr_race_aspect3' style='' placeholder=''>
+            <input class='sheet-input_text' type='text' name='attr_race_aspect4' style='' placeholder=''>
+            <input class='sheet-input_text' type='text' name='attr_race_aspect5' style='' placeholder=''>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>RACIAL SKILL</h3>
+            <p class='sheet-par'><b>When creating this race/species,</b> describe 3 things that this race/species is good at doing that sets them appart from other races/species.</p>
+            <p class='sheet-par'><b>When using this race/species for your character,</b> the racail skill is used just like any other fate skill and the following describes it.</p>
+            <input class='sheet-input_text' type='text' name='attr_race_skill1' style='' placeholder=''>
+            <input class='sheet-input_text' type='text' name='attr_race_skill2' style='' placeholder=''>
+            <input class='sheet-input_text' type='text' name='attr_race_skill3' style='' placeholder=''>
+        </div>
+    </div>
+    
+    <div class='sheet-section'>
+        <div class='sheet-col' style='width:100%'>
+            <h3>RACIAL FLAVOR (stunts)</h3>
+            <p class='sheet-par'><b>When creating this race/species,</b> describe 2 things which could be considered a special ability or attribute that not everyone in this race/species might know or have.</p>
+            <p class='sheet-par'><b>When using this race/species for your character,</b> choose 1 of the following flavors.</p>
+            <input class='sheet-input_text' type='text' name='attr_flav1' style='' placeholder=''>
+            <input class='sheet-input_text' type='text' name='attr_flav2' style='' placeholder=''>
+        </div>
+    </div>
+    
+</div>
+
+</div> <!-- end html div tag -->
+
+
+
+<!-- Roll Template -->
+<rolltemplate class="sheet-rolltemplate-fate">
+    <table style='border:5px outset blue; width:200px; text-align:center'>
+        <tr><th style='color:white; background-color:black; font-size:16px; padding:10px'>{{header}}</th></tr>
+        <tr><td style='padding:10px'><b>{{body}}</b></td></tr>
+    </table>
+</rolltemplate>

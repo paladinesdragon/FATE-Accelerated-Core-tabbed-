@@ -1,0 +1,252 @@
+.charsheet * {
+    box-sizing: border-box;
+    font-family:Verdana;
+}
+
+.sheet-section {
+    width:840px;
+    margin-bottom:10px;
+}
+
+.charsheet h3 {
+    color:white;
+    background-color:black;
+    margin-bottom:5px;
+    padding-left:10px;
+}
+
+.charsheet h4 {
+    width:88px;
+    height:30px;
+    padding-top:5px;
+}
+
+.sheet-par {
+    padding-left:10px;
+}
+
+.sheet-input_text {
+    border: 2px solid black;
+    width:100%;
+    margin-bottom:5px;
+}
+
+.sheet-float {
+    font-size:24px;
+    font-weight:bold;
+    border:1px solid black;
+    padding:0px;
+}
+
+.sheet-input_number {
+    border: 2px solid black;
+    margin:5px;
+}
+
+.sheet-input_text_dials {
+    width:155px;
+    border: 2px solid black;
+}
+
+.sheet-input_text_skills {
+    width:133.3px;
+    border:2px solid black;
+}
+
+.sheet-input_text_coreskill {
+    width:102px;
+    border: 2px solid black;
+    margin-right:8px;
+    margin-left:-2px;
+}
+
+.sheet-input_box {
+    width:30px;
+    border: 2px solid black;
+    font-size:20px;
+    font-weight:bold;
+    padding:0px;
+    text-align:center;
+}
+
+.sheet-input_num_header {
+    text-align:center;
+    border:1px solid red;
+    margin-bottom:3px;
+}
+
+.sheet-input_header {
+    width:60%;
+    background-color:black;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.charsheet textarea {
+    border: 2px solid black;
+    width:100%;
+    margin-bottom:5px;
+    resize:vertical;
+}
+
+.sheet-box {
+    border: 2px solid black;
+    width:49%;
+    text-align:center;
+    display:inline-block;
+}
+
+.sheet-acc_button {
+   font-weight:bold;
+   border:3px outset #D3D3D3;
+   background-color:white;
+   height:30px;
+   width:95%;
+}
+
+.sheet-core_button {
+    font-weight:bold;
+   border:3px outset #D3D3D3;
+   background-color:white;
+}
+
+.sheet-acc_button:hover,
+.sheet-core_button:hover {
+    border:3px outset blue;
+}
+
+.charsheet table {
+    width:100%;
+    text-align:center;
+}
+
+.sheet-page {
+    display:none;
+}
+
+.sheet-tab-button.sheet-accelerated:checked ~ .sheet-page.sheet-accelerated,
+.sheet-tab-button.sheet-core:checked ~ .sheet-page.sheet-core,
+.sheet-tab-button.sheet-game:checked ~ .sheet-page.sheet-game,
+.sheet-tab-button.sheet-character:checked ~ .sheet-page.sheet-character,
+.sheet-tab-button.sheet-race:checked ~ .sheet-page.sheet-race {
+    display:block;
+}
+
+.sheet-tab-button.sheet-accelerated + span {
+    position: absolute;
+    left:477px;
+    top:45px;
+    width:118px;
+    height:25px;
+    border: 3px outset #D3D3D3;
+    background-color: white;
+    text-align:center;
+    font-weight: bold;
+}*
+
+.sheet-tab-button.sheet-core + span {
+    position: absolute;
+    left:597px;
+    top:45px;
+    width:54px;
+    height:25px;
+    border: 3px outset #D3D3D3;
+    background-color: white;
+    text-align:center;
+    font-weight: bold;
+}
+
+.sheet-tab-button.sheet-game + span {
+    position: absolute;
+    left:653px;
+    top:45px;
+    width:56px;
+    height:25px;
+    border: 3px outset #D3D3D3;
+    background-color: white;
+    text-align:center;
+    font-weight: bold;
+}
+
+.sheet-tab-button.sheet-character + span {
+    position: absolute;
+    left:711px;
+    top:45px;
+    width:103px;
+    height:25px;
+    border: 3px outset #D3D3D3;
+    background-color: white;
+    text-align:center;
+    font-weight: bold;
+}
+
+.sheet-tab-button.sheet-race + span {
+    position: absolute;
+    left:816px;
+    top:45px;
+    width:53px;
+    height:25px;
+    border: 3px outset #D3D3D3;
+    background-color: white;
+    text-align:center;
+    font-weight: bold;
+}
+
+.sheet-tab-button.sheet-accelerated:checked + span,
+.sheet-tab-button.sheet-core:checked +span,
+.sheet-tab-button.sheet-game:checked +span,
+.sheet-tab-button.sheet-character:checked +span,
+.sheet-tab-button.sheet-race:checked +span {
+    border:3px outset blue;
+}
+
+.sheet-tab-button.sheet-accelerated {
+    opacity:0;
+    position: absolute;
+    left:477px;
+    top:45px;
+    width:119px;
+    height:26px;
+    z-index:2;
+}
+
+.sheet-tab-button.sheet-core {
+    opacity:0;
+    position: absolute;
+    left:597px;
+    top:45px;
+    width:55px;
+    height:26px;
+    z-index:2;
+}
+
+.sheet-tab-button.sheet-game {
+    opacity:0;
+    position: absolute;
+    left:653px;
+    top:45px;
+    width:57px;
+    height:26px;
+    z-index:2;
+}
+
+.sheet-tab-button.sheet-character {
+    opacity:0;
+    position: absolute;
+    left:711px;
+    top:45px;
+    width:104px;
+    height:26px;
+    z-index:2;
+}
+
+.sheet-tab-button.sheet-race {
+    opacity:0;
+    position: absolute;
+    left:816px;
+    top:45px;
+    width:54px;
+    height:26px;
+    z-index:2;
+}
